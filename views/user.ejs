@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+  <% if (user) { %>
+    <title><%= user.name %>'s User Profile</title>
+  <% } else { %>
+    <title>Invalid User Profile</title>
+  <% } %>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="col-lg-8 col-lg-push-2">
+      <% if (user) { %>
+        <h1>User Profile</h1>
+        <h2><%= user.name %></h2>
+        <h3>Company: <%= user.company %></h3>
+        <h4>Email: <%= user.email %></h4>
+        <h4>Phone: <%= user.phone %></h4>
+      <% } else { %>
+        <h1>User doesn't exist!</h1>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>
